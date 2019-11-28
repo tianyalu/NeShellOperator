@@ -36,6 +36,10 @@ b=10
 -o   | 或运算，有一个表达式为true，则返回true   | [ $a -le 20 -o $b -gt 100 ]返回true
 -a   | 与运算，两个表达式都为true,才返回true    | [ $a -le 20 -o $b -gt 100 ]返回false
 
+实操：  
+![image](https://github.com/tianyalu/NeShellOperator/blob/master/show/bool_operator.png)  
+
+
 ### 1.4 逻辑运算符
 运算符 | 说明      | 举例 |  
 --    | -------   | --  |  
@@ -49,9 +53,13 @@ b=10
 !=    | 检测两个字符串是否不相等，不相等返回true  | [ $a != $b ]返回true
 -z    | 检测字符串长度是否为0，为0返回true       | [ -z $a ]返回false
 -n    | 检测字符串长度是否不为0，不为0返回true    | [ -n "$a" ]返回true
-$     | 检测字符串是否为空，不为空返回true        | [ $a ]返回true
+$     | 检测字符串是否为空，不为空返回true        | [ $a ]返回true  
 
-### 1.2 文件测试运算符
+实操：  
+![image](https://github.com/tianyalu/NeShellOperator/blob/master/show/string_operator.png)  
+
+
+### 1.6 文件测试运算符
 运算符   | 说明                                                           | 举例
 --      | -------------------------------------------------------------  | --
 -b file | 检测文件是否是块设备文件，如果是，则返回true                         | [ -b $file ]返回false
@@ -68,6 +76,12 @@ $     | 检测字符串是否为空，不为空返回true        | [ $a ]返回t
 -s file | 检测文件是否是否为空（文件大小是否大于0），不为空则返回true           | [ -s $file ]返回true
 -e file | 检测文件（包含目录）是否存在，如果是，则返回true                    | [ -e $file ]返回true
 
+### 1.7 shell算术运算方式
+* 使用$(())
+* 使用$[]
+* 使用let 命令
+* 使用expr外部程式（推荐）  
 
-![image](https://github.com/tianyalu/NeMakefile/blob/master/show/make_file_fun_param.png)  
+实操：  
+![image](https://github.com/tianyalu/NeShellOperator/blob/master/show/arithmetical_operator.png)  
 
